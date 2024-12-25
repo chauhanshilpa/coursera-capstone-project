@@ -1,6 +1,5 @@
 :root {
     --headerHeight: 5rem;
-    --footerHeight: 10rem;
     --heroSectionHeight: 25.688rem;
     --llgreen: #495E57;
     --llyellow: #F4CE14;
@@ -44,11 +43,11 @@ a {
     align-items: center;
 }
 
-/* main */
+/* this is the middle area of window. If middle area has less or no content then footer will always come on bottom regardless of content height of middle part of any page */
 
-#main {
+.middle {
     margin-top: var(--headerHeight);
-    min-height: calc(100% - (var(--headerHeight) + var(--footerHeight)));
+    min-height: calc(100vh - 27.8rem);
 }
 
 /*  hero-section*/
@@ -333,6 +332,7 @@ a {
 
 #footer {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     background-color: #EDEFEE;
     padding: 2rem 8rem;
@@ -364,3 +364,32 @@ a {
     font-family: var(--karla);
     font-size: 20px;
 }
+
+#online_order{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+#online_order h2{
+    font-size: xx-large;
+    color: var(--llgreen)
+}
+
+#online_order img{
+    height: 500px;
+    width: 500px;
+}
+
+#reservations_hero {
+    width: 100vw;
+    height: 25rem;
+    background-image: url("https://www.syriana.co.za/wp-content/uploads/2022/05/book-a-table-in-restaurant-online.jpg");
+    background-color: var(--llgreen);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+}
+

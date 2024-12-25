@@ -1,8 +1,8 @@
 const ConfirmedBooking = () => {
   return (
-    <p>
+    <div className="middle">
       Booking has been confirmed
-    </p>
+    </div>
   )
 }
 
