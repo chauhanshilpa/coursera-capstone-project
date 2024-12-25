@@ -19,7 +19,6 @@ const BookingForm = ({
   const [isFormValid, setIsFormValid] = useState("");
 
   useEffect(() => {
-    console.log("useEffectRunning");
     const validateReservation = () => {
       if (
         reservation.time !== "" &&
