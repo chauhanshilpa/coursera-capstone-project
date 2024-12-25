@@ -338,7 +338,9 @@ a {
     padding: 2rem 8rem;
 }
 
-.footer_nav_heading, .footer_contacts_heading, .footer_socials_heading{
+.footer_nav_heading,
+.footer_contacts_heading,
+.footer_socials_heading {
     font-size: 20px;
     font-weight: 600;
     font-family: var(--karla);
@@ -353,7 +355,7 @@ a {
     margin-top: 5rem;
 }
 
-#footer img{
+#footer img {
     height: 300px;
     width: 400px;
     box-shadow: 1px 1px 5px rgb(27, 27, 27);
@@ -365,7 +367,7 @@ a {
     font-size: 20px;
 }
 
-#online_order{
+#online_order {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -373,12 +375,12 @@ a {
     flex-wrap: wrap;
 }
 
-#online_order h2{
+#online_order h2 {
     font-size: xx-large;
     color: var(--llgreen)
 }
 
-#online_order img{
+#online_order img {
     height: 500px;
     width: 500px;
 }
@@ -393,3 +395,58 @@ a {
     background-size: contain;
 }
 
+#booking_form {
+    display: flex;
+    margin: 2rem auto;
+    flex-direction: column;
+    max-width: 40%;
+}
+
+#booking_form label {
+    font-size: x-large;
+    font-weight: 700;
+    font-family: var(--karla);
+}
+
+#booking_form input,
+#booking_form select {
+    padding: 6px;
+}
+
+#booking_form input:focus,
+#booking_form select:focus {
+    outline: none;
+    border-color: #495E57;
+}
+
+.submit-button {
+    background-color: var(--llgreen);
+    border: 1px solid var(--llgreen);
+    border-radius: 5px;
+    color: white;
+    height: 2.5rem;
+    font-size: medium;
+    margin-top: 2rem;
+    box-shadow: 1px 3px 5px rgb(39, 37, 37);
+}
+
+.submit-button:hover {
+    cursor: pointer;
+    background-color: var(--llyellow);
+    color: var(--llgreen);
+}
+
+@media screen and (min-width: 1200px) {
+    #booking_form {
+        display: flex;
+        margin: 2rem auto;
+        flex-direction: column;
+        max-width: 30%;
+    }
+}
+
+@media screen and (max-width: 444px) {
+    #booking_form {
+        max-width: 90%;
+    }
+}

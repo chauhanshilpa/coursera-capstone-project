@@ -6,6 +6,7 @@ import Reservation from "./pages/Reservation";
 import Login from "./pages/Login";
 import { Routes, Route } from "react-router-dom";
 import OnlineOrder from "./pages/OnlineOrder";
+import ConfirmedBooking from "./pages/ConfirmedBooking";
 
 function App() {
 
@@ -14,9 +15,10 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/reservation" element={<Reservation/>} />
+        <Route path="/reservation" element={<Reservation />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/orderOnline" element={<OnlineOrder/>} />
+        <Route path="/orderOnline" element={<OnlineOrder />} />
+        <Route path="/confirm-booking" element={<ConfirmedBooking/>} />
       </Routes>
       <Footer />
     </>

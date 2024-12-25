@@ -15,7 +15,6 @@ const updateTimeSlots = (availableTimeSlots, date) => {
 };
 
 const initTimeSlots = (initAvaliableTimeSlots) => {
-  // return [...initAvaliableTimeSlots, ...fetchAPI(new Date())];
   return {
     morning: [
       ...initAvaliableTimeSlots.morning,
@@ -42,21 +41,10 @@ const Reservation = () => {
 
   const navigate = useNavigate();
 
-  // Handler Function to submit the reservation data to the server
   const submitReservation = (reservation) => {
-    console.log("Reservation From Data: ", reservation);
     const response = submitAPI(reservation);
-
-    const confrimPageMap = new Map();
-    confrimPageMap.set("confirmedBooking", {
-      name: "Confirmed Booking",
-      path: "/ConfirmedBooking",
-      anchorable: true,
-    });
-
     if (response) {
-      // alert("Data Submitted Successfully");
-      navigate(confrimPageMap.get("confirmedBooking").path);
+      navigate("/confirm-booking");
     } else {
       alert("Data Submission Failed");
     }

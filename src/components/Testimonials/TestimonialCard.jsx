@@ -4,7 +4,6 @@ const TestimonialCard = ({ record }) => {
     let stars = ""
     for(let i=1; i<=number; i++){
       stars += "⭐";
-      console.log(stars, ":stars");
     }
     return stars;
   }
