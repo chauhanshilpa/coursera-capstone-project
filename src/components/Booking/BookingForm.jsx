@@ -17,6 +17,7 @@ const BookingForm = ({
     ocassion: ocassion,
   });
   const [isFormValid, setIsFormValid] = useState("");
+  const [dateInputFocused, setDateInputFocused] = useState(false);
 
   useEffect(() => {
     const validateReservation = () => {
@@ -51,6 +52,7 @@ const BookingForm = ({
   };
 
   const chooseDate = (event) => {
+    console.log(event)
     const newDate = moment(new Date(event.target.value)).format("YYYY-MM-DD");
     setDate(newDate);
     setReservation({ ...reservation, date: newDate });
@@ -70,39 +72,83 @@ const BookingForm = ({
 
   return (
     <form
-      style={{ display: "grid", gap: "20px" }}
+      style={{ display: "grid" }}
       id="booking_form"
       onSubmit={onSubmitHandler}
     >
-      <label htmlFor="guests">Number of guests</label>
-      <input
-        type="number"
-        placeholder="1"
-        min="1"
-        max="10"
-        id="guests"
-        onChange={chooseGuest}
-        value={guests}
-      />
-      <label htmlFor="occasion">Occasion</label>
-      <select id="occasion" onChange={chooseOcassion} value={ocassion}>
-        <option value="birthday">Birthday</option>
-        <option value="anniversary">Anniversary</option>
-      </select>
-      <label htmlFor="res-date">Choose date</label>
-      <input type="date" id="res-date" onChange={chooseDate} value={date} />
-      <label htmlFor="res-date">Choose time</label>
-      <select onChange={chooseTime} value={time}>
-        {Object.entries(availableTimeSlots).map(([key, values], idx) => (
-          <optgroup key={idx} label={key}>
-            {values.map((time, valueIdx) => (
-              <option key={valueIdx} value={time}>
-                {time}
-              </option>
-            ))}
-          </optgroup>
-        ))}
-      </select>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          marginBottom: "20px",
+        }}
+      >
+        <label htmlFor="guests">Number of guests</label>
+        <input
+          type="number"
+          placeholder="1"
+          min="1"
+          max="10"
+          id="guests"
+          onChange={chooseGuest}
+          value={guests}
+        />
+        {guests < 1 && (
+          <p className="error">Guests can not be null or less than 1</p>
+        )}
+      </div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          marginBottom: "20px",
+        }}
+      >
+        <label htmlFor="occasion">Occasion</label>
+        <select id="occasion" onChange={chooseOcassion} value={ocassion}>
+          <option value="birthday">Birthday</option>
+          <option value="anniversary">Anniversary</option>
+        </select>
+      </div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          marginBottom: "20px",
+        }}
+      >
+        <label htmlFor="res-date">Choose date</label>
+        <input
+          type="date"
+          id="res-date"
+          onChange={chooseDate}
+          value={date}
+          onFocus={() => setDateInputFocused(true)}
+        />
+        {date === "" && dateInputFocused && (
+          <p className="error">Choose a date</p>
+        )}
+      </div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          marginBottom: "20px",
+        }}
+      >
+        <label htmlFor="res-date">Choose time</label>
+        <select onChange={chooseTime} value={time}>
+          {Object.entries(availableTimeSlots).map(([key, values], idx) => (
+            <optgroup key={idx} label={key}>
+              {values.map((time, valueIdx) => (
+                <option key={valueIdx} value={time}>
+                  {time}
+                </option>
+              ))}
+            </optgroup>
+          ))}
+        </select>
+      </div>
       <input
         type="submit"
         value="Make Your reservation"

@@ -4,7 +4,7 @@ import chef from "../../assets/restaurant-chef.jpg";
 const About = () => {
   return (
     <div id="about">
-      <div>
+      <div className="about_left">
         <h1 className="heading">Little Lemon</h1>
         <h5 className="country">Chicago</h5>
         <p className="description-1">

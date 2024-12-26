@@ -9,7 +9,6 @@ import OnlineOrder from "./pages/OnlineOrder";
 import ConfirmedBooking from "./pages/ConfirmedBooking";
 
 function App() {
-
   return (
     <>
       <Navbar />

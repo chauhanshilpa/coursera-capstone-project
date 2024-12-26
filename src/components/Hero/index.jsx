@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import heroImage from "../../assets/restaurant-food.jpg";
 
 const HeroSection = () => {
+  const navigate  = useNavigate();
+
   return (
     <div id="hero">
       <div className="hero-left">
@@ -12,7 +15,9 @@ const HeroSection = () => {
           Tempora eius deserunt corrupti esse nemo earum, a doloremque minus
           molestias! Quia.
         </p>
-        <button>Reserve a Table</button>
+        <button onClick={() => navigate("/reservation")} style={{cursor: "pointer"}}>
+          Reserve a Table
+        </button>
       </div>
       <div className="hero-right">
         <img src={heroImage} alt="hero-image" />
