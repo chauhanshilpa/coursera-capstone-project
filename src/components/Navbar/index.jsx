@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <header id="header">
       <Link to="/">
-        <img src={logo} alt="logo" width={200} height={60} className="logo" />
+        <img src={logo} alt="logo" className="logo" />
       </Link>
       {windowSize <= "852" ? (
         <img

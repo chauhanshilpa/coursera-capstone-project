@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer id="footer">
       <img src={restaurantImage} alt="Restaurant image" />
-      <div style={{display: "flex", justifyContent: "center", gap: "2rem", flexWrap: "wrap"}}>
+      <div style={{display: "flex", gap: "2rem", flexWrap: "wrap", marginTop: "3rem"}}>
         <nav className="nav">
           <div className="footer_nav_heading">Doormat Navigation</div>
           <Link to="/">HOME</Link>
