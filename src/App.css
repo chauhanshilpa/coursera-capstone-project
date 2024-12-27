@@ -507,13 +507,19 @@ a {
     align-items: center;
     justify-content: center;
     gap: 5rem;
+    flex-wrap: wrap;
 }
 
 #login p {
-    font-size: 34px;
+    font-size: 2.125rem;
     font-family: var(--markazi);
     color: var(--llyellow);
     font-weight: 700;
+}
+
+#login img {
+    width: 100%;
+    max-width: 50%;
 }
 
 @media screen and (min-width: 1200px) {
@@ -542,6 +548,10 @@ a {
         align-self: center;
         justify-self: center;
     }
+
+    #login img {
+        max-width: 80%;
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -553,17 +563,6 @@ a {
     #about {
         padding: 0 1rem;
     }
-}
-
-@media screen and (max-width: 1150px) {
-    /* #about {
-        padding: 0 1rem;
-    }
-
-    #about {
-        display: flex;
-        flex-direction: column;
-    } */
 }
 
 @media (max-width: 768px) {
