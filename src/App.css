@@ -397,8 +397,10 @@ a {
 }
 
 #online_order img {
-    height: 500px;
-    width: 500px;
+    width: 100%;
+    max-height: 31.25rem;
+    max-width: 31.25rem;
+    object-fit: contain;
 }
 
 #reservations_hero {
