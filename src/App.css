@@ -176,7 +176,7 @@ a {
     flex-direction: column;
     background-color: var(--cardBackground);
     border-radius: 10px;
-    width: 31%;
+    width: 17rem;
     box-shadow: 1px 1px 5px rgb(178, 177, 177);
 }
 
@@ -233,6 +233,7 @@ a {
     flex-direction: column;
     background-color: #EDEFEE;
     padding: 3rem 0;
+    margin-top: 4rem;
 }
 
 #testimonial .heading {
@@ -244,9 +245,10 @@ a {
 
 #testimonial .testimonial_container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     padding: 4rem 8rem;
+    gap: 1rem;
 }
 
 .testimonial_card {
@@ -306,12 +308,8 @@ a {
 }
 
 #about .about_images {
-    display: flex;
     position: relative;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    margin: 4rem 8rem 4rem auto;
+    margin: 4rem auto;
     z-index: 1;
 }
 
@@ -323,8 +321,8 @@ a {
     background-repeat: no-repeat;
     background-size: auto 100%;
     border-radius: 10px;
-    height: 380px;
-    width: 290px;
+    height: 23.75rem;
+    width: 18.125rem;
     box-shadow: 1px 3px 5px rgb(27, 27, 27);
 }
 
@@ -333,7 +331,6 @@ a {
     left: 65%;
     bottom: 25%;
 }
-
 
 #about .about_images .about_image1 img,
 #about .about_images .about_image2 img {
@@ -542,5 +539,98 @@ a {
         margin: 0 auto;
         align-self: center;
         justify-self: center;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    #hero,
+    #highlights,
+    #testimonial .testimonial_container,
+    #footer,
+    #about {
+        padding: 0 1rem;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    /* #about {
+        padding: 0 1rem;
+    }
+
+    #about {
+        display: flex;
+        flex-direction: column;
+    } */
+}
+
+@media (max-width: 768px) {
+    #about {
+        flex-direction: column;
+        padding: 1.5rem 4rem;
+        gap: 1rem;
+    }
+
+    .about_left {
+        max-width: 80%;
+        text-align: center;
+    }
+
+    #about .about_images .about_image1,
+    #about .about_images .about_image2 {
+        width: 15rem;
+        height: 18rem;
+    }
+
+    #about .about_images .about_image2 {
+        left: 30%;
+        bottom: 40%;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+}
+
+@media (max-width: 480px) {
+    #about {
+        padding: 1.5rem;
+    }
+
+    .about_left {
+        max-width: 100%;
+    }
+
+    .about_left h1 {
+        font-size: 1.5rem;
+    }
+
+    .about_left h5 {
+        font-size: 1rem;
+    }
+
+    #about .description-1,
+    #about .description-2 {
+        font-size: 0.9rem;
+    }
+
+    #about .about_images {
+        margin: 2rem 0;
+    }
+
+    #about .about_images .about_image1,
+    #about .about_images .about_image2 {
+        width: 12rem;
+        height: 15rem;
+    }
+
+    #about .about_images .about_image2 {
+        position: static;
+        margin-top: 1rem;
+        transform: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    #about {
+        flex-direction: column;
     }
 }

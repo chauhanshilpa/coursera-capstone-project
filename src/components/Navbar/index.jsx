@@ -51,6 +51,7 @@ const Navbar = () => {
             position: "absolute",
             right: "2rem",
             top: "5rem",
+            gap: "0.5rem",
             boxShadow: "1px 1px 5px rgb(27, 27, 27)",
           }}
         >
