@@ -1,4 +1,3 @@
-import React from "react";
 import HeroSection from "../components/Hero";
 import Highlights from "../components/Highlights";
 import Testimonials from "../components/Testimonials";
